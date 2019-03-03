@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity2"
+    android:background="@drawable/bg_blue">
+    <TextView
+        android:id="@+id/game1_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/font_one"
+        android:text="Score:"
+        android:textSize="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        android:textColor="#FFFFFF"/>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/game1_image_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game1_score"
+        app:layout_constraintBottom_toTopOf="@id/game1_tv1"
+        app:layout_constraintHeight_percent="0.6"
+        >
+
+        <ImageView
+            android:id="@+id/game1_first"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/cat"
+            app:layout_constraintBottom_toTopOf="@id/game1_third"
+            app:layout_constraintEnd_toStartOf="@id/game1_second"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/game1_image_layout"
+            app:layout_constraintHeight_percent="0.3"/>
+
+        <ImageView
+            android:id="@+id/game1_second"
+            android:layout_width="160dp"
+            android:layout_height="91dp"
+            android:src="@drawable/lion"
+            app:layout_constraintHeight_percent="0.3"
+            app:layout_constraintStart_toEndOf="@id/game1_first"
+            app:layout_constraintEnd_toEndOf="@id/game1_image_layout"
+            app:layout_constraintTop_toTopOf="@id/game1_image_layout"
+            app:layout_constraintBottom_toTopOf="@id/game1_forth"/>
+        <ImageView
+            android:id="@+id/game1_third"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/pig"
+            app:layout_constraintBottom_toBottomOf="@id/game1_image_layout"
+            app:layout_constraintEnd_toStartOf="@id/game1_forth"
+            app:layout_constraintStart_toStartOf="@id/game1_image_layout"
+            app:layout_constraintTop_toBottomOf="@+id/game1_first"
+            app:layout_constraintHeight_percent="0.3"/>
+
+        <TextView
+            android:id="@+id/game1_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/game1_image_layout"
+            app:layout_constraintBottom_toBottomOf="@id/game1_image_layout"
+            app:layout_constraintStart_toStartOf="@id/game1_image_layout"
+            app:layout_constraintEnd_toEndOf="@id/game1_image_layout"
+            android:text="10"
+            android:fontFamily="@font/font_one"
+            android:textSize="60dp"
+            android:textColor="#FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/game1_forth"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/rhino"
+            app:layout_constraintBottom_toBottomOf="@id/game1_image_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/game1_third"
+            app:layout_constraintTop_toBottomOf="@+id/game1_second"
+            app:layout_constraintHeight_percent="0.3"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/game1_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="13dp"
+        android:fontFamily="@font/font_one"
+        android:gravity="center"
+        android:text="The pig is on the"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/game1_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game1_image_layout" />
+    <EditText
+        android:id="@+id/game1_edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/game1_tv1"
+        app:layout_constraintEnd_toEndOf="@id/game1_tv2"
+        app:layout_constraintTop_toBottomOf="@id/game1_image_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/font_one"
+        android:textSize="15dp"
+        android:text=""
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:id="@+id/game1_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="of the cat"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/game1_image_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/game1_edit"
+        android:textSize="15dp"
+        android:fontFamily="@font/font_one"
+        />
+</android.support.constraint.ConstraintLayout>
