@@ -72,6 +72,7 @@ public class GameActivity5 extends AppCompatActivity {
                     Thread.sleep(1000);     // sleep 1000ms
                     if(second==-1){
                         Intent intent = new Intent(GameActivity5.this,Final.class);
+                        intent.putExtra("score",score);
                         startActivity(intent);
                         finish();
                         return;
